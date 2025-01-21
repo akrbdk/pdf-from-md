@@ -47,7 +47,7 @@ class FileProcessor
         return $list;
     }
 
-    public function generatePDF(array $fileList, string $outputFile = 'book.pdf', string $titleFile = 'title.txt'): void
+    public function generatePDF(array $fileList, string $outputFile = 'book.pdf'): void
     {
         if (empty($fileList)) {
             echo "No markdown files found. Check your folder structure or options.\n";
@@ -56,7 +56,7 @@ class FileProcessor
 
         $fileListString = implode(' ', array_map('escapeshellarg', $fileList));
         $outputFilePath = $this->rootPath . $outputFile;
-        $pandocCommand = "pandoc --pdf-engine=xelatex --toc -o $outputFilePath " . escapeshellarg($titleFile) . " $fileListString";
+        $pandocCommand = "pandoc --pdf-engine=xelatex --toc -o $outputFilePath $fileListString";
 
         $this->runCommand($pandocCommand);
     }
