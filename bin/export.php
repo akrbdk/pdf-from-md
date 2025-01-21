@@ -1,5 +1,7 @@
 <?php
 
+require __DIR__ . '/../vendor/autoload.php';
+
 // Main script execution
 use Akrbdk\PdfFromMd\FileProcessor;
 
