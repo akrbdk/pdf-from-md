@@ -1,0 +1,29 @@
+{
+    "name": "akrbdk/pdf-from-md",
+    "description": "A PHP to process and export Markdown files to PDF.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "alexander.karabudka",
+            "email": "sanyakarabudka@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Akrbdk\\PdfFromMd\\": "src/"
+        }
+    },
+    "bin": [
+        "bin/export.php"
+    ],
+    "scripts": {
+        "test": "phpunit --testdox"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}
